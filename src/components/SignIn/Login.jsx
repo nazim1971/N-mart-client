@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import "react-toastify/dist/ReactToastify.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import {  FaRegEye, FaRegEyeSlash } from "react-icons/fa";

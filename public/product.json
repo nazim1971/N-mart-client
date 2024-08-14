@@ -1,0 +1,403 @@
+[
+    {
+        "name": "4K Ultra HD Smart TV",
+        "brand": "Samsung",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "55-inch 4K Ultra HD Smart TV with HDR and voice control.",
+        "price": 599.99,
+        "category": "Electronics",
+        "ratings": 4.8,
+        "creationDate": "2024-07-25T10:00:00Z"
+      },
+      {
+        "name": "Wireless Noise-Canceling Headphones",
+        "brand": "Sony",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Premium wireless noise-canceling headphones with 30-hour battery life.",
+        "price": 299.99,
+        "category": "Electronics",
+        "ratings": 4.7,
+        "creationDate": "2024-07-24T12:30:00Z"
+      },
+      {
+        "name": "Bluetooth Speaker",
+        "brand": "Bose",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Portable Bluetooth speaker with deep bass and 360-degree sound.",
+        "price": 129.99,
+        "category": "Electronics",
+        "ratings": 4.6,
+        "creationDate": "2024-07-23T14:20:00Z"
+      },
+      {
+        "name": "Smartwatch",
+        "brand": "Apple",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Smartwatch with fitness tracking, heart rate monitor, and GPS.",
+        "price": 399.99,
+        "category": "Electronics",
+        "ratings": 4.9,
+        "creationDate": "2024-07-22T16:00:00Z"
+      },
+      {
+        "name": "Laptop",
+        "brand": "Dell",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "15.6-inch laptop with Intel Core i7, 16GB RAM, and 512GB SSD.",
+        "price": 1099.99,
+        "category": "Electronics",
+        "ratings": 4.7,
+        "creationDate": "2024-07-21T09:50:00Z"
+      },
+      {
+        "name": "Gaming Monitor",
+        "brand": "Acer",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "27-inch QHD gaming monitor with 144Hz refresh rate and G-Sync.",
+        "price": 349.99,
+        "category": "Electronics",
+        "ratings": 4.8,
+        "creationDate": "2024-07-20T11:45:00Z"
+      },
+      {
+        "name": "Tablet",
+        "brand": "Microsoft",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Surface Pro tablet with detachable keyboard and stylus support.",
+        "price": 899.99,
+        "category": "Electronics",
+        "ratings": 4.7,
+        "creationDate": "2024-07-19T13:25:00Z"
+      },
+      {
+        "name": "Wireless Earbuds",
+        "brand": "Jabra",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "True wireless earbuds with active noise cancellation and IP57 rating.",
+        "price": 149.99,
+        "category": "Electronics",
+        "ratings": 4.5,
+        "creationDate": "2024-07-18T08:15:00Z"
+      },
+      {
+        "name": "Digital Camera",
+        "brand": "Canon",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "24.1MP digital camera with dual pixel autofocus and 4K video recording.",
+        "price": 749.99,
+        "category": "Electronics",
+        "ratings": 4.8,
+        "creationDate": "2024-07-17T15:10:00Z"
+      },
+      {
+        "name": "Home Theater System",
+        "brand": "Yamaha",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "5.1-channel home theater system with Dolby Atmos support.",
+        "price": 699.99,
+        "category": "Electronics",
+        "ratings": 4.7,
+        "creationDate": "2024-07-16T09:35:00Z"
+      },
+      {
+        "name": "Air Conditioner",
+        "brand": "LG",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "1.5 Ton split air conditioner with dual inverter and Wi-Fi control.",
+        "price": 599.99,
+        "category": "Home Appliances",
+        "ratings": 4.7,
+        "creationDate": "2024-07-25T10:00:00Z"
+      },
+      {
+        "name": "Front Load Washing Machine",
+        "brand": "Samsung",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "7kg front load washing machine with eco bubble technology.",
+        "price": 499.99,
+        "category": "Home Appliances",
+        "ratings": 4.8,
+        "creationDate": "2024-07-24T12:30:00Z"
+      },
+      {
+        "name": "Refrigerator",
+        "brand": "Whirlpool",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Double door refrigerator with adaptive intelligence technology.",
+        "price": 899.99,
+        "category": "Home Appliances",
+        "ratings": 4.6,
+        "creationDate": "2024-07-23T14:20:00Z"
+      },
+      {
+        "name": "Microwave Oven",
+        "brand": "Panasonic",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "1200W microwave oven with inverter technology and sensor cooking.",
+        "price": 199.99,
+        "category": "Home Appliances",
+        "ratings": 4.7,
+        "creationDate": "2024-07-22T16:00:00Z"
+      },
+      {
+        "name": "Dishwasher",
+        "brand": "Bosch",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Fully integrated dishwasher with auto dry and 16 place settings.",
+        "price": 799.99,
+        "category": "Home Appliances",
+        "ratings": 4.8,
+        "creationDate": "2024-07-21T09:50:00Z"
+      },
+      {
+        "name": "Vacuum Cleaner",
+        "brand": "Dyson",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Cordless stick vacuum cleaner with powerful suction and HEPA filter.",
+        "price": 499.99,
+        "category": "Home Appliances",
+        "ratings": 4.9,
+        "creationDate": "2024-07-20T11:45:00Z"
+      },
+      {
+        "name": "Water Purifier",
+        "brand": "Kent",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "RO + UV water purifier with zero water wastage technology.",
+        "price": 249.99,
+        "category": "Home Appliances",
+        "ratings": 4.6,
+        "creationDate": "2024-07-19T13:25:00Z"
+      },
+      {
+        "name": "Induction Cooktop",
+        "brand": "Philips",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "2000W induction cooktop with touch control and 10 preset menus.",
+        "price": 99.99,
+        "category": "Home Appliances",
+        "ratings": 4.5,
+        "creationDate": "2024-07-18T08:15:00Z"
+      },
+      {
+        "name": "Electric Kettle",
+        "brand": "Breville",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "1.7L electric kettle with temperature control and keep warm function.",
+        "price": 79.99,
+        "category": "Home Appliances",
+        "ratings": 4.7,
+        "creationDate": "2024-07-17T15:10:00Z"
+      },
+      {
+        "name": "Espresso Machine",
+        "brand": "DeLonghi",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "15-bar espresso machine with milk frother and programmable settings.",
+        "price": 299.99,
+        "category": "Home Appliances",
+        "ratings": 4.8,
+        "creationDate": "2024-07-16T09:35:00Z"
+      },
+      {
+        "name": "Blood Pressure Monitor",
+        "brand": "Omron",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Automatic blood pressure monitor with cuff wrap guide and irregular heartbeat detection.",
+        "price": 69.99,
+        "category": "Health",
+        "ratings": 4.7,
+        "creationDate": "2024-07-30T10:00:00Z"
+      },
+      {
+        "name": "Digital Thermometer",
+        "brand": "Braun",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Fast-read digital thermometer with memory recall and fever guidance.",
+        "price": 19.99,
+        "category": "Health",
+        "ratings": 4.6,
+        "creationDate": "2024-07-29T11:30:00Z"
+      },
+      {
+        "name": "Pulse Oximeter",
+        "brand": "Zacurate",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Finger pulse oximeter for measuring blood oxygen saturation levels and pulse rate.",
+        "price": 29.99,
+        "category": "Health",
+        "ratings": 4.8,
+        "creationDate": "2024-07-28T14:00:00Z"
+      },
+      {
+        "name": "Fitness Tracker",
+        "brand": "Fitbit",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Fitness tracker with heart rate monitoring, sleep tracking, and GPS.",
+        "price": 99.99,
+        "category": "Health",
+        "ratings": 4.7,
+        "creationDate": "2024-07-27T09:45:00Z"
+      },
+      {
+        "name": "Electric Toothbrush",
+        "brand": "Oral-B",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Electric toothbrush with pressure sensor, 2-minute timer, and multiple brushing modes.",
+        "price": 49.99,
+        "category": "Health",
+        "ratings": 4.9,
+        "creationDate": "2024-07-26T08:20:00Z"
+      },
+      {
+        "name": "Personal Scale",
+        "brand": "Withings",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Smart scale with body composition analysis, Wi-Fi sync, and health tracking app.",
+        "price": 79.99,
+        "category": "Health",
+        "ratings": 4.8,
+        "creationDate": "2024-07-25T13:15:00Z"
+      },
+      {
+        "name": "Massage Gun",
+        "brand": "Theragun",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Percussive therapy massage gun with multiple speed settings and attachments.",
+        "price": 199.99,
+        "category": "Health",
+        "ratings": 4.9,
+        "creationDate": "2024-07-24T12:00:00Z"
+      },
+      {
+        "name": "Air Purifier",
+        "brand": "Dyson",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "HEPA air purifier with activated carbon filter and air quality monitor.",
+        "price": 299.99,
+        "category": "Health",
+        "ratings": 4.7,
+        "creationDate": "2024-07-23T11:30:00Z"
+      },
+      {
+        "name": "Infrared Thermometer",
+        "brand": "iHealth",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "No-contact infrared thermometer with instant readings and large LED display.",
+        "price": 39.99,
+        "category": "Health",
+        "ratings": 4.8,
+        "creationDate": "2024-07-22T10:45:00Z"
+      },
+      {
+        "name": "Sleep Mask",
+        "brand": "Mavogel",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Adjustable sleep mask with light-blocking technology and soft cotton material.",
+        "price": 14.99,
+        "category": "Health",
+        "ratings": 4.6,
+        "creationDate": "2024-07-21T15:00:00Z"
+      },
+      {
+        "name": "Yoga Mat",
+        "brand": "Lululemon",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "High-density yoga mat with non-slip surface and extra cushioning.",
+        "price": 59.99,
+        "category": "Fitness",
+        "ratings": 4.8,
+        "creationDate": "2024-07-30T09:00:00Z"
+      },
+      {
+        "name": "Dumbbell Set",
+        "brand": "Bowflex",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Adjustable dumbbell set with weight range from 5 to 52.5 lbs.",
+        "price": 249.99,
+        "category": "Fitness",
+        "ratings": 4.9,
+        "creationDate": "2024-07-29T10:45:00Z"
+      },
+      {
+        "name": "Resistance Bands",
+        "brand": "Fit Simplify",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Set of 5 resistance bands with varying resistance levels for strength training.",
+        "price": 12.99,
+        "category": "Fitness",
+        "ratings": 4.7,
+        "creationDate": "2024-07-28T12:00:00Z"
+      },
+      {
+        "name": "Treadmill",
+        "brand": "NordicTrack",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Folding treadmill with 10-inch HD touchscreen, incline control, and 30-day iFit membership.",
+        "price": 1299.99,
+        "category": "Fitness",
+        "ratings": 4.8,
+        "creationDate": "2024-07-27T14:30:00Z"
+      },
+      {
+        "name": "Kettlebell",
+        "brand": "Rogue Fitness",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Cast iron kettlebell with smooth finish and flat base for stability.",
+        "price": 79.99,
+        "category": "Fitness",
+        "ratings": 4.9,
+        "creationDate": "2024-07-26T09:15:00Z"
+      },
+      {
+        "name": "Foam Roller",
+        "brand": "TriggerPoint",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "High-density foam roller for deep tissue massage and muscle recovery.",
+        "price": 34.99,
+        "category": "Fitness",
+        "ratings": 4.7,
+        "creationDate": "2024-07-25T08:30:00Z"
+      },
+      {
+        "name": "Jump Rope",
+        "brand": "WOD Nation",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Speed jump rope with adjustable length and ball bearing handles for fast spinning.",
+        "price": 19.99,
+        "category": "Fitness",
+        "ratings": 4.6,
+        "creationDate": "2024-07-24T10:00:00Z"
+      },
+      {
+        "name": "Exercise Ball",
+        "brand": "Trideer",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Anti-burst exercise ball with pump for balance, stability, and core training.",
+        "price": 25.99,
+        "category": "Fitness",
+        "ratings": 4.8,
+        "creationDate": "2024-07-23T11:45:00Z"
+      },
+      {
+        "name": "Fitness Tracker",
+        "brand": "Garmin",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Fitness tracker with heart rate monitoring, GPS, and body battery energy monitoring.",
+        "price": 129.99,
+        "category": "Fitness",
+        "ratings": 4.7,
+        "creationDate": "2024-07-22T13:00:00Z"
+      },
+      {
+        "name": "Pull-Up Bar",
+        "brand": "Iron Gym",
+        "image": "https://i.ibb.co/rfm6FwJ/visa-size.png",
+        "description": "Doorway pull-up bar for upper body workouts with multiple grip positions.",
+        "price": 29.99,
+        "category": "Fitness",
+        "ratings": 4.8,
+        "creationDate": "2024-07-21T15:30:00Z"
+      }
+
+]
