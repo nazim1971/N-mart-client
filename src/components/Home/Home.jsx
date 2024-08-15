@@ -68,21 +68,24 @@ const Home = () => {
 
     return (
         <div className="max-w-[1290px] mb-16 mx-auto min-h-screen">
-             <div className="flex items-center gap-5">
+             <div className=" gap-5">
                 
-                {/* search */}
-                <div>
+              <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 mt-5">
+                  {/* search */}
+                  <div className="flex flex-col ">
                     <label className="font-bold">
                         Search
                     </label>
                 <input
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)} 
-                type="text" placeholder="Search" className="input l input-primary" />
+                type="text" placeholder="Search" className=" h-12 rounded-xl pl-3 border " />
                 </div>
-               <div className="grid grid-cols-3">
+
+               <div className=" md:col-span-2 text-sm lg:text-base lg:col-span-2 mx-auto">
+               <div className="flex  gap-3 ">
                  {/* sort */}
-                 <div className="border p-2">
+                 <div className="border p-2 rounded-xl">
                     <h2 className="font-bold">Sort </h2>
                     <select name="Sort" id=""
                      onChange={(e) => {setSort(e.target.value) ;setPage(1)}}
@@ -95,7 +98,7 @@ const Home = () => {
                     </select>
                 </div>
                 {/* Brand */}
-                <div className="border p-2">
+                <div className="border p-2 rounded-xl">
                     <h2 className="font-bold">Brand </h2>
                     <select name="Brand" 
                     value={brand}
@@ -108,7 +111,7 @@ const Home = () => {
                     </select>
                 </div>
                 {/* category */}
-                <div className="border p-2">
+                <div className="border p-2 rounded-xl">
                     <h2 className="font-bold">Category Name</h2>
                     <select name="Category"
                     value={category}
@@ -121,8 +124,9 @@ const Home = () => {
                     </select>
                 </div>
                </div>
-                {/* price */}
-                <div>
+               </div>
+                 {/* price */}
+                 <div className="md:col-span-2 lg:col-span-1">
                 <form  onSubmit={ handleSubmit(onSubmit)}>
                     <h1>Price</h1>
                     <div className="flex gap-3">
@@ -140,13 +144,16 @@ const Home = () => {
              
               </form>
                 </div>
+
+              </div>
+              
              </div>
 
             { isFetching ? <LoadingSpinner /> :
-             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 shadow-xl mt-10 rounded-xl">
+             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-5 shadow-xl mt-10 rounded-xl">
              {
                  transHis.products.map((i)=> 
-                 <div key={i._id} className="border p-2 space-y-2  h-[400px] ">
+                 <div key={i._id} className="border p-2 space-y-2  h-[400px] rounded-xl ">
                      <div className="h-[200px] ">
                      <img src={i.image} className=" h-full mx-auto" alt="" />
                      </div>
