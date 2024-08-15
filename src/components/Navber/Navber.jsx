@@ -24,15 +24,11 @@ const Navber = () => {
     })
     .catch();}
 
-    const menu = <>
-    <li > <NavLink  to='/'> Home </NavLink> </li>
-   {
-    user && <>
-     <li > <NavLink  to='/about'> About </NavLink> </li>
-     <li > <NavLink  to='/contect'> Contect </NavLink> </li>
-     </>
-   }
-    </>
+    const menuItems = [
+      { path: '/', label: 'Home' },
+      { path: '/about', label: 'About' },
+      { path: '/contect', label: 'Contect' }
+    ];
 
     // dark and light mode 
     const [theme, setTheme] = useState(() => {
@@ -54,15 +50,28 @@ const Navber = () => {
   };
 
     return (
-        <div id="home" className="max-w-[1290px] mx-auto border  ">
-            <div className="navbar bg-base-100">
+        <div id="home" className=" bg-green-50 w-full  ">
+            <div className="navbar max-w-[1290px] mx-auto ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-       {menu}
+      {menuItems.map(({ path, label }) => (
+      <li key={path}>
+        <NavLink
+          to={path}
+          className={({ isActive }) =>
+            ` border-transparent hover:border-green-500 ${
+              isActive ? 'text-green-500 ' : ''
+            }`
+          }
+        >
+          {label}
+        </NavLink>
+      </li>
+    ))}
       </ul>
     </div>
     <Link to='/' className="btn btn-ghost text-xl"> <img className="h-10 w-10 animate__animated animate__pulse  animate__infinite" src="https://i.ibb.co/C2Rx4rg/website-logo-removebg-preview.png" alt="website-logo" />  <a>
@@ -70,8 +79,21 @@ const Navber = () => {
               </a></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      {menu}
+    <ul className="flex gap-3 px-1">
+    {menuItems.map(({ path, label }) => (
+      <li key={path}>
+        <NavLink
+          to={path}
+          className={({ isActive }) =>
+            `border-b-2 border-transparent hover:border-green-500 ${
+              isActive ? 'text-green-500 ' : ''
+            }`
+          }
+        >
+          {label}
+        </NavLink>
+      </li>
+    ))}
       
     </ul>
   </div>

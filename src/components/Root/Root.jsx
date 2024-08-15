@@ -21,10 +21,10 @@ const Root = () => {
     }
     return (
         <div className="max-w-[1920px] mx-auto" >
-            <div className=" w-[94%] mx-auto ">
-            <Navber/>
-            <Outlet />
-            </div>
+             <Navber/>
+             <div className="w-[96%] mx-auto">
+             <Outlet />
+             </div>
             <Footer/>
         </div>
     );
