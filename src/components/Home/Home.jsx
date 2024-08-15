@@ -150,24 +150,23 @@ const Home = () => {
              </div>
 
             { isFetching ? <LoadingSpinner /> :
-             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-5 shadow-xl mt-10 rounded-xl">
+             <div className="flex gap-3 flex-wrap shadow-xl mt-10 rounded-xl">
              {
                  transHis.products.map((i)=> 
-                 <div key={i._id} className="border p-2 space-y-2  h-[400px] rounded-xl ">
+                 <div key={i._id} className="border bg-slate-300 mx-auto p-2 space-y-2  h-[400px] w-[340px] rounded-xl ">
                      <div className="h-[200px] ">
                      <img src={i.image} className=" h-full mx-auto" alt="" />
                      </div>
                      <hr />
                      <h1 className='font-bold'>{i.name} </h1> 
-                     <div className="flex justify-between">
-                         <p>Price: {i.price} </p>
-                         <p> Rating: {i.ratings}  </p>
-                         </div>  
-
                          <div className="flex justify-between">
                          <p>Brand: {i.brand} </p>
                          <p> Category: {i.category}  </p>
                          </div>
+                         <div className="flex justify-between">
+                         <p>Price: {i.price} </p>
+                         <p> Rating: {i.ratings}  </p>
+                         </div> 
                          <p>{i.description} </p>
                  </div>
                  )
