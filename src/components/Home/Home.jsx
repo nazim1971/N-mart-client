@@ -1,46 +1,108 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useForm } from "react-hook-form";
+import LoadingSpinner from "../Hooks/LoadingSpiner";
+import toast from "react-hot-toast";
 
 
 
 const Home = () => {
 
-    const { data: transHis = [] } = useQuery({
-        queryKey: ['allTransHistory'],
+    const [category, setCategory] = useState('');
+    const [sort, setSort] = useState('');
+    const [priceRange, setPriceRange] = useState({ min: '', max: '' });
+    const [searchQuery, setSearchQuery] = useState('');
+    const [brand, setBrand] = useState('');
+    const [page, setPage] = useState(1); // Current page
+    
+
+    
+
+    const { data: transHis = {products:[] , totalPages:1 ,brands: [], categories: []} , isError, isLoading} = useQuery({
+        queryKey: ['allTransHistory', category, sort, priceRange, searchQuery, brand, page],
         queryFn: async () => {
-          const { data } = await axios.get(`http://localhost:5000/v1/allProducts`);
+          const { data } = await axios.get(`http://localhost:5000/v1/allProducts`, {
+            params: {
+              category,
+              sort,
+              minPrice: priceRange.min,
+              maxPrice: priceRange.max,
+              search: searchQuery,
+              brand, 
+              page
+            },
+          });
           return data;
         },
+        keepPreviousData: true,
       });
+
       const {
         register,
         handleSubmit
       } = useForm()
       const onSubmit = (data) => {
-        const {email,password} = data }
+        setPriceRange({ min: data.minPrice, max: data.maxPrice });}
+
+        const handleNextPage = () => {
+            if (transHis && page < transHis.totalPages) {
+                setPage((prev) => prev + 1);
+            }
+        };
+        const handlePrevPage = () => {
+            if (page > 1) {
+                setPage((prev) => prev - 1);
+            }
+        };
+    
+        if (isLoading) {
+            return <LoadingSpinner/>;
+        }
+    
+        if (isError) {
+            return toast.error(`${isError.message}`);
+        }
 
     return (
         <div>
              <div className="flex gap-5">
-                <input type="text" placeholder="Search" className="input input-primary" />
+                <input
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)} 
+                type="text" placeholder="Search" className="input input-primary" />
                 <div className="border p-2">
                     <h2 className="font-bold">Sort </h2>
-                    <select name="Sort" id="">
-                        <option value="Low to High">Low to High</option>
-                        <option value="Hign to Low">Hign to Low</option>
-                        <option value="Old to New">Old to New</option>
-                        <option value="New to Old">New to Old</option>
+                    <select name="Sort" id=""
+                     onChange={(e) => setSort(e.target.value)}
+                    >
+                        <option value="">Select</option>
+                        <option value="LowToHigh">Low to High</option>
+                        <option value="HignToLow">Hign to Low</option>
+                        <option value="OldtoNew">Old to New</option>
+                        <option value="NewtoOld">New to Old</option>
+                    </select>
+                </div>
+                <div className="border p-2">
+                    <h2 className="font-bold">Brand </h2>
+                    <select name="Brand" id=""
+                        onChange={(e) => setBrand(e.target.value)}
+                    >
+                        <option value="">Select</option>
+                        {transHis.brands.map((brand, index) => (
+                            <option key={index} value={brand}>{brand}</option>
+                        ))}
                     </select>
                 </div>
                 <div className="border p-2">
                     <h2 className="font-bold">Category Name</h2>
-                    <select name="Category" id="">
-                        <option value="Fitness">Fitness</option>
-                        <option value="Health">Health</option>
-                        <option value="Home Appliances">Home Appliances</option>
-                        <option value="Electronics">Electronics</option>
+                    <select name="Category" id=""
+                        onChange={(e) => setCategory(e.target.value)}
+                    >
+                        <option value="">Select</option>
+                        {transHis.categories.map((category, index) => (
+                            <option key={index} value={category}>{category}</option>
+                        ))}
                     </select>
                 </div>
                 <div>
@@ -48,11 +110,11 @@ const Home = () => {
                     <h1>Price</h1>
                     <div className="flex gap-3">
                     <input
-                  {...register("email",{required: true})}
-                  id="LoggingEmailAddress" className="block w-full px-4 py-2   border rounded-lg  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="BDT" />
+                   {...register("minPrice")}
+                  id="LoggingEmailAddress" className="block w-full px-4 py-2   border rounded-lg  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="BDT" />
                    <input
-                  {...register("email",{required: true})}
-                  id="LoggingEmailAddress" className="block w-full px-4 py-2   border rounded-lg  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="BDT" />
+                  {...register("maxPrice")}
+                  id="LoggingEmailAddress" className="block w-full px-4 py-2   border rounded-lg  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="BDT" />
              
              <button type="submit" className=" btn btn-primary px-6 py-3 text-sm font-medium tracking-wide  capitalize transition-colors duration-300 transform  rounded-lg  focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
                      ok
@@ -63,9 +125,9 @@ const Home = () => {
                 </div>
              </div>
 
-             <div className="grid grid-cols-3 gap-5 shadow-xl mt-10 rounded-xl">
+             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 shadow-xl mt-10 rounded-xl">
                 {
-                    transHis.map((i)=> 
+                    transHis.products.map((i)=> 
                     <div key={i._id} className="border p-2 space-y-2  h-[400px] ">
                         <div className="h-[200px] ">
                         <img src={i.image} className=" h-full mx-auto" alt="" />
@@ -86,6 +148,22 @@ const Home = () => {
                     )
                 }
              </div>
+             <div className="flex justify-between mt-5">
+                <button
+                    onClick={handlePrevPage}
+                    disabled={page === 1}
+                    className="btn btn-secondary"
+                >
+                    Previous
+                </button>
+                <button
+                    onClick={handleNextPage}
+                    disabled={page === transHis.totalPages}
+                    className="btn btn-secondary"
+                >
+                    Next
+                </button>
+            </div>
         </div>
     );
 };
