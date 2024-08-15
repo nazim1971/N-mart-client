@@ -7,7 +7,12 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Navber = () => {
+   
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
 
     const { user, logOut } = useContext(AuthContext);
   const navigate = useNavigate()
@@ -23,10 +28,6 @@ const Navber = () => {
     <li > <NavLink  to='/'> Home </NavLink> </li>
     <li > <NavLink  to='/about'> About </NavLink> </li>
     <li > <NavLink  to='/contect'> Contect </NavLink> </li>
-    
-    {
-      user &&  <li > <NavLink  to='/addProduct'>Add Product </NavLink> </li>
-    }
     </>
 
     // dark and light mode 
@@ -49,7 +50,7 @@ const Navber = () => {
   };
 
     return (
-        <div>
+        <div id="home" className="max-w-[1290px] mx-auto border  ">
             <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -61,10 +62,7 @@ const Navber = () => {
       </ul>
     </div>
     <Link to='/' className="btn btn-ghost text-xl"> <img className="h-10 w-10 animate__animated animate__pulse  animate__infinite" src="https://i.ibb.co/C2Rx4rg/website-logo-removebg-preview.png" alt="website-logo" />  <a>
-                Crafty
-                <span>
-                  Carv<a className="text-green-500 font-semibold ">e</a>
-                </span>
+                N-mart
               </a></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -92,31 +90,33 @@ const Navber = () => {
 
           {/* user picture and logout/login btn */}
           {user ? (
-            <div className="flex gap-3 items-center z-[1000] ">
-              <div> 
-                
-                <a id="clickable">
-                <img 
-                  className="h-14 w-14 rounded-full   "
-                  src={
-                    (user && user?.photoURL) ||
-                    "https://i.ibb.co/VHD1J6g/user-profile-icon-free-vector.jpg"
-                  }
-                  alt=""
-                />
-                </a>
-                <Tooltip  anchorSelect="#clickable" clickable>
-                    <p >{user.displayName} </p>
-                <button
-                onClick={handleSignOut}
-                className="btn bg-red-600 text-white"
-              >
-                Logout
-              </button>
-                    </Tooltip>
-              </div>
-              
-            </div>
+             <div className="flex gap-3 items-center z-[1000] relative">
+             <div>
+               <a id="clickable" onClick={toggleDropdown}>
+                 <img
+                   className="h-14 w-14 rounded-full cursor-pointer"
+                   src={
+                     (user && user?.photoURL) ||
+                     "https://i.ibb.co/VHD1J6g/user-profile-icon-free-vector.jpg"
+                   }
+                   alt=""
+                 />
+               </a>
+       
+               {dropdownOpen && (
+                 <div className="absolute right-0 mt-4 w-48 bg-white border rounded-lg shadow-lg">
+                   <p className="px-4 py-2 text-gray-700">{user.displayName}</p>
+                   <hr />
+                   <button
+                     onClick={handleSignOut}
+                     className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-100"
+                   >
+                     Logout
+                   </button>
+                 </div>
+               )}
+             </div>
+           </div>
           ) : (
             <div className="flex gap-2">
               <Link to="/login" className="btn bg-green-500 text-white">

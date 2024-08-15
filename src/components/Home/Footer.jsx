@@ -1,115 +1,73 @@
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaPhoneAlt, FaYoutube } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoMdMailOpen } from "react-icons/io";
-import { Typewriter } from "react-simple-typewriter";
+import { FaFacebookF, FaGithub, FaInstagram } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { IoLogoTwitter } from "react-icons/io";
 
 
 const Footer = () => {
     return (
-        <div>
-         <div
-      className="bg-[#262626]  mt-44  "
-      
-    >
-      <div className=" ">
-        <footer className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 p-10 text-white ">
-          <aside className="col-span-2 flex flex-col">
-            <p className='text-4xl font-bold'>
-              
-              
-              <Typewriter
-        words={['Crafty', 'Carve', 'Crafty Carve']}
-        loop={true}
-        cursor
-        cursorStyle='_'
-        typeSpeed={100}
-        deleteSpeed={50}
-        delaySpeed={2000}
-      />
-            </p>
-            <p className="my-2 ">
-            Search through over 1 million listings, including sculptures, paintings, installations, and more, available for display. You’ll discover your next masterpiece, in any style you prefer.
-            </p>
-            <div className=" text-xl flex gap-2 text-green-500 my-2">
-              <FaFacebook />
-              <FaInstagram />
-              <FaLinkedin />
-              <FaGithub />
-              <FaYoutube />
-            </div>
-           <div className="space-y-1">
-           <h3 className="text-2xl font-bold">Contact Info :</h3>
-            <p className="flex items-center gap-2">
-              {" "}
-              <FaPhoneAlt className="text-green-500" /> (888) 111-2222
-            </p>
-            <p className="flex items-center gap-2">
-              {" "}
-              <IoMdMailOpen className="text-green-500" /> support@CraftyCarve.com
-            </p>
-            <p className="flex items-center gap-2">
-              {" "}
-              <FaLocationDot className="text-green-500" /> 23 Urban Street,
-              Cityville, USA
-            </p>
-           </div>
-          </aside>
-          <nav className="flex flex-col">
-          <h6 className="footer-title text-green-500">About Sculpture</h6>
-          <a className="link link-hover">Artistry</a>
-          <a className="link link-hover">Craftsmanship</a>
-          <a className="link link-hover">Materials</a>
-          <a className="link link-hover">Inspiration</a>
-          <a className="link link-hover">Techniques</a>
-          <a className="link link-hover">History</a>
-          <a className="link link-hover">Gallery</a>
-          <a className="link link-hover">Events</a>
-          <a className="link link-hover">Workshops</a>
-          <a className="link link-hover">Publications</a>
-          <a className="link link-hover">Community</a>
-        </nav>
-        <nav className="flex flex-col">
-  <h6 className="footer-title text-green-500">SCULPTURE MANAGER</h6>
-  <a className="link link-hover">Sculpture Manager</a>
-  <a className="link link-hover">Exhibit Your Work</a>
-  <a className="link link-hover">Connect with Artists</a>
-  <a className="link link-hover">Artwork Listings</a>
-  <a className="link link-hover">Commission Sculptures</a>
-  <a className="link link-hover">Sculpture Manager</a>
-  <a className="link link-hover">Resources</a>
-</nav>
+        <div className=" bg-no-repeat bg-cover " style={{backgroundImage: 'url(footerBg.png)'}}>
 
-<nav className="flex flex-col">
-  <h6 className="footer-title text-green-500">SCULPTURE SPOTS</h6>
-  <a className="link link-hover">Marble District</a>
-  <a className="link link-hover">Bronze Plaza, NYC</a>
-  <a className="link link-hover">Granite Grove, MD</a>
-  <a className="link link-hover">Clay Corner</a>
-  <a className="link link-hover">Woodland Workshop</a>
-  <a className="link link-hover">Metallic Mile</a>
-  <a className="link link-hover">Artisanal Avenue</a>
-  <a className="link link-hover">Sculpture Square</a>
-</nav>
+            <div className="max-w-[1290px] mx-auto px-5 flex items-center  h-full ">
 
-          <nav className="flex flex-col ">
-            <h6 className="footer-title text-green-500">Legal</h6>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
-          </nav>
-        </footer>
-
-        <div className="px-10 ">
-          <hr className=" opacity-20 " />
-          <p className="text-center text-sm text-white py-5">© 2024  <a>
-                Crafty
-                <span>
-                  Carv<a className="text-green-500 font-semibold ">e</a>
-                </span>
-              </a> Reserved</p>
-        </div>
-      </div>
+   <div className=" flex flex-col justify-end  mx-auto  h-full ">
+   <div className="grid lg:grid-cols-6 md:grid-cols-4 gap-8 grid-cols-2  my-20 w-full ">
+    <div className="col-span-2">
+    <a href="#home" className="flex items-center space-x-2">
+                  <div className="h-11 w-11">
+                  <img  className="h-full w-full" src="https://i.ibb.co/C2Rx4rg/website-logo-removebg-preview.png" alt="" />
+                  </div>
+                <p className="font-cali text-2xl text-white ">N-mart</p>
+             </a>
+             <p className="text-lg font-medium text-[#FFFFFFB2] mb-5 mt-2 leading-[28px] ">Contrary to popular belief, Lorem Ipsum is <br /> not simply random text. It has roots.</p>
+    <div className="text-white flex gap-5 ">
+            <a href="#home" className="bg-[#cdc9c934] p-[5px] transition-colors ease-in duration-300 h-10 w-10 flex items-center text-xl justify-center rounded-full hover:bg-green-500">
+            <IoLogoTwitter  />
+            </a>
+            <a href="#home" className="bg-[#cdc9c934] p-[5px] transition-colors ease-in duration-300 h-10 w-10 flex items-center text-xl justify-center rounded-full hover:bg-green-500">
+            <FaFacebookF  />
+            </a>
+            <a href="#home" className="bg-[#cdc9c934] p-[5px] transition-colors ease-in duration-300 h-10 w-10 flex items-center text-xl justify-center rounded-full hover:bg-green-500">
+            <FaInstagram  />
+            </a>
+            <a href="#home" className="bg-[#cdc9c934] p-[5px] transition-colors ease-in duration-300 h-10 w-10 flex items-center text-xl justify-center rounded-full hover:bg-green-500">
+            <FaGithub  />
+            </a>
     </div>
+    </div>
+    <div>
+        <h3 className="font-bold text-[22px] text-white mb-[22px] "> Support</h3>
+        <div className="text-[#ffffffa1] flex flex-col font-medium space-y-[20px] ">
+            <a href="#home">Forum Support</a>
+            <a href="#home">Help & FAQ</a>
+            <a href="#home">Contact Us</a>
+            <a href="#home">Pricing & Plans</a>
+        </div>
+    </div>
+    <div>
+        <h3 className="font-bold text-[22px] text-white mb-[22px] "> Company</h3>
+        <div className="text-[#ffffffa1] flex flex-col font-medium space-y-[20px] ">
+            <a href="#home">About Us</a>
+            <a href="#home">Courses</a>
+            <a href="#home">Help Centre</a>
+            <a href="#home">News</a>
+        </div>
+    </div>
+    <div className="col-span-2 " >
+        <h2 className="font-bold text-[22px] text-white mb-9 ">Subscribe to Newsletter</h2>
+        <div className="flex  relative">
+            <HiOutlineMail  className="absolute top-4 text-lg left-5 text-[#17171769]"/>
+            <input className="h-[50px]  w-[266px] pl-[50px] rounded-l-[50px] " type="text" placeholder="Enter email address" />
+            <a href="#home"  className="text-white bg-green-500 btnJoin before:bg-[#F4B826] active:before:bg-[#F4B826] hover:text-secondaryC font-bold h-[50px]  w-[120px] rounded-r-[50px]  flex justify-center items-center">Join Now</a>
+        </div>
+    </div>
+    </div>
+    <div className="bg-[#FFFFFF0F] rounded-t-[10px] py-5 ">
+        <h1 className="font-medium text-[#ffffff96] text-sm text-center ">© 2024 N-mart All Rights Reserved by site</h1>
+    </div>
+   </div>
+
+    
+            </div>
         </div>
     );
 };

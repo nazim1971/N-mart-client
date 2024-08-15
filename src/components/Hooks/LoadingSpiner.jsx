@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import { ScaleLoader } from 'react-spinners'
 
-const LoadingSpinner = ({ smallHeight }) => {
+const LoadingSpinner = () => {
   return (
     <div
-      className={` ${smallHeight ? 'h-[250px]' : 'h-[70vh]'}
+      className={` h-screen
       flex 
       flex-col 
       justify-center 
