@@ -26,8 +26,12 @@ const Navber = () => {
 
     const menu = <>
     <li > <NavLink  to='/'> Home </NavLink> </li>
-    <li > <NavLink  to='/about'> About </NavLink> </li>
-    <li > <NavLink  to='/contect'> Contect </NavLink> </li>
+   {
+    user && <>
+     <li > <NavLink  to='/about'> About </NavLink> </li>
+     <li > <NavLink  to='/contect'> Contect </NavLink> </li>
+     </>
+   }
     </>
 
     // dark and light mode 

@@ -150,10 +150,10 @@ const Home = () => {
              </div>
 
             { isFetching ? <LoadingSpinner /> :
-             <div className="flex gap-3 flex-wrap shadow-xl mt-10 rounded-xl">
+             <div className="flex gap-3 pb-8 flex-wrap  mt-10 rounded-xl">
              {
                  transHis.products.map((i)=> 
-                 <div key={i._id} className="border bg-slate-300 mx-auto p-2 space-y-2  h-[400px] w-[340px] rounded-xl ">
+                 <div key={i._id} className="border bg-slate-300 mx-auto p-3 space-y-2  h-[420px] w-[340px] rounded-xl ">
                      <div className="h-[200px] ">
                      <img src={i.image} className=" h-full mx-auto" alt="" />
                      </div>
@@ -166,7 +166,8 @@ const Home = () => {
                          <div className="flex justify-between">
                          <p>Price: {i.price} </p>
                          <p> Rating: {i.ratings}  </p>
-                         </div> 
+                         </div>
+                         <p>Listed: {new Date(i.creationDate).toLocaleDateString()} </p> 
                          <p>{i.description} </p>
                  </div>
                  )
