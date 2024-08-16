@@ -54,9 +54,9 @@ const Footer = () => {
     </div>
     <div className="col-span-2 " >
         <h2 className="font-bold text-[22px] text-white mb-9 ">Subscribe to Newsletter</h2>
-        <div className="flex  relative">
+        <div className="flex   relative">
             <HiOutlineMail  className="absolute top-4 text-lg left-5 text-[#17171769]"/>
-            <input className="h-[50px]  max-w-[266px] pl-[50px] rounded-l-[50px] " type="text" placeholder="Enter email address" />
+            <input className="h-[50px] w-[200px]  md:w-[266px] pl-[50px] rounded-l-[50px] " type="text" placeholder="Email" />
             <a href="#home"  className="text-white bg-green-500 btnJoin before:bg-[#F4B826] active:before:bg-[#F4B826] hover:text-secondaryC font-bold h-[50px]  w-[120px] rounded-r-[50px]  flex justify-center items-center">Join Now</a>
         </div>
     </div>

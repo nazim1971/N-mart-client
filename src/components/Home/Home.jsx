@@ -84,12 +84,12 @@ const Home = () => {
                 type="text" placeholder="Search" className=" h-12 rounded-xl pl-3 border " />
                 </div>
 
-               <div className=" md:col-span-2 text-sm lg:text-base lg:col-span-2 mx-auto">
-               <div className="flex text-sm  gap-3 ">
+               <div className=" md:col-span-2 col-span-1 flex items-center text-sm lg:text-base lg:col-span-2 mx-auto">
+               <div className="flex text-sm  space-x-2 ">
                  {/* sort */}
                  <div className="border p-2 rounded-xl">
                     <h2 className="font-bold">Sort </h2>
-                    <select name="Sort" id=""
+                    <select name="Sort" className="w-full"
                      onChange={(e) => {setSort(e.target.value) ;setPage(1)}}
                     >
                         <option value="">Select</option>
@@ -102,7 +102,8 @@ const Home = () => {
                 {/* Brand */}
                 <div className="border p-2 rounded-xl">
                     <h2 className="font-bold">Brand </h2>
-                    <select name="Brand" 
+                    <select 
+                    className="w-full"
                     value={brand}
                         onChange={(e) => {setBrand(e.target.value) ;setPage(1)}}
                     >
@@ -113,9 +114,9 @@ const Home = () => {
                     </select>
                 </div>
                 {/* category */}
-                <div className="border p-2 rounded-xl">
-                    <h2 className="font-bold">Category Name</h2>
-                    <select name="Category"
+                <div className="border  p-2 rounded-xl">
+                    <h2 className="font-bold">Category</h2>
+                    <select  className="w-full"
                     value={category}
                         onChange={(e) => {setCategory(e.target.value) ; setPage(1)}}
                     >
@@ -125,6 +126,7 @@ const Home = () => {
                         ))}
                     </select>
                 </div>
+
                </div>
                </div>
                  {/* price */}
@@ -165,7 +167,7 @@ const Home = () => {
                    <p className="text-primaryC text-2xl font-bold flex  items-center "> ${i.price}
                    </p>
                  </div>
-                 <p className="text-xl font-bold  leading-[30px] ">{i.name} </p>
+                 <p className=" font-bold   ">{i.name} </p>
                 
                  <div className="mb-3 text-sm">
                     {i.description}
