@@ -4,6 +4,10 @@ import {  useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import LoadingSpinner from "../Hooks/LoadingSpiner";
 import toast from "react-hot-toast";
+import { FaStar } from "react-icons/fa";
+import { IoMdTime } from "react-icons/io";
+import { FiBook } from "react-icons/fi";
+import { GoPeople } from "react-icons/go";
 
 
 
@@ -128,16 +132,16 @@ const Home = () => {
                  {/* price */}
                  <div className="md:col-span-2 lg:col-span-1">
                 <form  onSubmit={ handleSubmit(onSubmit)}>
-                    <h1>Price</h1>
+                    <h1 className="font-bold">Price</h1>
                     <div className="flex gap-3">
                     <input
                    {...register("minPrice")}
-                  id="LoggingEmailAddress" className="block w-full px-4 py-2   border rounded-lg  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="BDT 10" />
+                  id="LoggingEmailAddress" className="block w-full px-4 py-2   border rounded-lg  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="10" />
                    <input
                   {...register("maxPrice")}
-                  id="LoggingEmailAddress" className="block w-full px-4 py-2   border rounded-lg  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="BDT 1000" />
+                  id="LoggingEmailAddress" className="block w-full px-4 py-2   border rounded-lg  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300" type="number" placeholder="1000" />
              
-             <button type="submit" className=" btn h- btn-primary px-6 py-3 text-sm font-medium tracking-wide  capitalize transition-colors duration-300 transform  rounded-lg  focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
+             <button type="submit" className=" btn bg-green-500 text-white   text-sm font-medium    duration-300 transform  rounded-lg  btnJoin before:bg-[#F4B826] active:before:bg-[#F4B826]">
                      Submit
                   </button>
                     </div>
@@ -150,26 +154,31 @@ const Home = () => {
              </div>
 
             { isFetching ? <LoadingSpinner /> :
-             <div className="flex gap-3 pb-8 flex-wrap  mt-10 rounded-xl">
+             <div className="flex gap-8  flex-wrap  my-10 rounded-xl">
              {
                  transHis.products.map((i)=> 
-                 <div key={i._id} className="border bg-slate-300 mx-auto p-3 space-y-2  h-[420px] w-[340px] rounded-xl ">
-                     <div className="h-[200px] ">
-                     <img src={i.image} className=" h-full mx-auto" alt="" />
-                     </div>
-                     <hr />
-                     <h1 className='font-bold'>{i.name} </h1> 
-                         <div className="flex justify-between">
-                         <p>Brand: {i.brand} </p>
-                         <p> Category: {i.category}  </p>
-                         </div>
-                         <div className="flex justify-between">
-                         <p>Price: {i.price} </p>
-                         <p> Rating: {i.ratings}  </p>
-                         </div>
-                         <p>Listed: {new Date(i.creationDate).toLocaleDateString()} </p> 
-                         <p>{i.description} </p>
+                    <div key={i._id} className="h-[450px] hover:border-green-500 hover:shadow-xl hover:-mt-5 w-[350px] border-[#1118271A] border transition-all duration-300 transform ease-in-out rounded-2xl bg-white p-5 ">
+
+                 <div className=" bg-contain  rounded-[10px] relative w-full h-[220px] mb-6 bg-no-repeat" style={{backgroundImage: `url(${i.image})`, backgroundPosition: 'center'}}>
+                   <p className="text-[15px] w-fit absolute top-5 left-5 font-medium bg-green-500 text-white px-3 py-1 text-center rounded-[50px] btnJoin before:bg-[#F4B826] active:before:bg-[#F4B826]  "> {i.category} </p>
                  </div>
+                 <div className="flex justify-between mb-[14px] ">
+                   <p className="text-[15px] text-[#111827aa] px-3 py-1 border font-medium rounded-[50px]"> {i.brand} </p>
+                   <p className="text-primaryC text-2xl font-bold flex  items-center "> ${i.price}
+                   </p>
+                 </div>
+                 <p className="text-xl font-bold  leading-[30px] ">{i.name} </p>
+                
+                 <div className="mb-3 text-sm">
+                    {i.description}
+                 </div>
+
+                 <div className="text-[#111827b0] border-t  pt-2 text-sm font-semibold flex gap-4">
+                   <p className="flex items-center gap-[6px] "> <IoMdTime  className=" text-lg" /> <span> {new Date(i.creationDate).toISOString().split('T')[0]}  </span> </p>
+                   <p className="flex items-center gap-[6px] "> <FaStar className="text-yellow-500" />
+                   <span> {i.ratings} </span> </p>
+                 </div>
+               </div>
                  )
              }
           </div>
@@ -178,16 +187,16 @@ const Home = () => {
                 <button
                     onClick={handlePrevPage}
                     disabled={page === 1}
-                    className="btn bg-green-500"
+                    className="btn bg-green-500 btnJoin before:bg-[#F4B826] active:before:bg-[#F4B826] text-white"
                 >
-                    Previous
+                    Previous-{page-1}
                 </button>
                 <button
                     onClick={handleNextPage}
                     disabled={page === transHis.totalPages}
-                    className="btn bg-green-500"
+                    className="btn text-white bg-green-500 btnJoin before:bg-[#F4B826] active:before:bg-[#F4B826]"
                 >
-                    Next
+                    Next-{page}
                 </button>
             </div>
         </div>
@@ -195,3 +204,4 @@ const Home = () => {
 };
 
 export default Home;
+

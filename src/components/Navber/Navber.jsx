@@ -63,8 +63,8 @@ const Navber = () => {
         <NavLink
           to={path}
           className={({ isActive }) =>
-            ` border-transparent hover:border-green-500 ${
-              isActive ? 'text-green-500 ' : ''
+            ` border-transparent  hover:border-green-500 ${
+              isActive ? 'text-green-500   ' : ''
             }`
           }
         >
@@ -86,7 +86,7 @@ const Navber = () => {
           to={path}
           className={({ isActive }) =>
             `border-b-2 border-transparent hover:border-green-500 ${
-              isActive ? 'text-green-500 ' : ''
+              isActive ? 'text-green-500 border-green-500' : ''
             }`
           }
         >

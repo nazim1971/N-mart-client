@@ -5,8 +5,6 @@ import Contect from "../components/Navber/Contect";
 import About from "../components/Navber/About";
 import Login from "../components/SignIn/Login";
 import Register from "../components/SignIn/Register";
-import ViewPrivate from "../components/Home/ViewPrivate";
-import Private from "../components/PrivateRoute/Private";
 
 const routes = createBrowserRouter([
     {
@@ -32,10 +30,6 @@ const routes = createBrowserRouter([
        {
         path: '/register',
         element: <Register/>
-       },
-       {
-        path: '/viewPrivate',
-        element: <Private><ViewPrivate/></Private>
        }
       ]
     },
