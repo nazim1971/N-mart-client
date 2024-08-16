@@ -24,7 +24,7 @@ const Home = () => {
     const { data: transHis = {products:[] , totalPages:1 ,brands: [], categories: []} , isError, isFetching, refetch} = useQuery({
         queryKey: ['allTransHistory', category, sort, priceRange, searchQuery, brand, page],
         queryFn: async () => {
-          const { data } = await axios.get(`https://n-mart-server.vercel.app/v1/allProducts`, {
+          const { data } = await axios.get(`${import.meta.env.VITE_API}`, {
             params: {
               category,
               sort,
@@ -84,7 +84,7 @@ const Home = () => {
                 type="text" placeholder="Search" className=" h-12 rounded-xl pl-3 border " />
                 </div>
 
-               <div className=" md:col-span-2 col-span-1 flex items-center text-sm lg:text-base lg:col-span-2 mx-auto">
+               <div className=" md:col-span-2 col-span-1  flex items-center  text-sm lg:text-base lg:col-span-2 mx-auto">
                <div className="flex text-sm  space-x-2 ">
                  {/* sort */}
                  <div className="border p-2 rounded-xl">
