@@ -1,5 +1,5 @@
 # N-mart
-
+Live Site: [https://n-mart-43656.web.app/](https://n-mart-43656.web.app/)
 N-mart is a versatile e-commerce platform where you can explore a wide range of products. It offers various features such as sorting by new/old and low/high price, filtering by brand, category, price range, and searching for items by name.
 
 ## Technologies Used
