@@ -85,7 +85,7 @@ const Home = () => {
                 </div>
 
                <div className=" md:col-span-2 text-sm lg:text-base lg:col-span-2 mx-auto">
-               <div className="flex  gap-3 ">
+               <div className="flex text-sm  gap-3 ">
                  {/* sort */}
                  <div className="border p-2 rounded-xl">
                     <h2 className="font-bold">Sort </h2>
@@ -128,7 +128,7 @@ const Home = () => {
                </div>
                </div>
                  {/* price */}
-                 <div className="md:col-span-2 lg:col-span-1">
+                 <div className="md:col-span-2  lg:col-span-1">
                 <form  onSubmit={ handleSubmit(onSubmit)}>
                     <h1 className="font-bold">Price</h1>
                     <div className="flex gap-3">
@@ -155,9 +155,9 @@ const Home = () => {
              <div className="flex gap-8  flex-wrap  my-10 rounded-xl">
              {
                  transHis.products.map((i)=> 
-                    <div key={i._id} className="h-[450px] hover:border-green-500 hover:shadow-xl hover:-mt-5 w-[350px] border-[#1118271A] border transition-all duration-300 transform ease-in-out rounded-2xl bg-white p-5 ">
+                    <div key={i._id} className="h-[450px] mx-auto hover:border-green-500 hover:shadow-xl hover:-mt-5 w-[350px] border-[#1118271A] border transition-all duration-300 transform ease-in-out rounded-2xl bg-white p-5 ">
 
-                 <div className=" bg-contain  rounded-[10px] relative w-full h-[220px] mb-6 bg-no-repeat" style={{backgroundImage: `url(${i.image})`, backgroundPosition: 'center'}}>
+                 <div className=" bg-cover rounded-xl  relative w-full h-[220px] mb-6 bg-no-repeat" style={{backgroundImage: `url(${i.image})`, backgroundPosition: 'center'}}>
                    <p className="text-[15px] w-fit absolute top-5 left-5 font-medium bg-green-500 text-white px-3 py-1 text-center rounded-[50px] btnJoin before:bg-[#F4B826] active:before:bg-[#F4B826]  "> {i.category} </p>
                  </div>
                  <div className="flex justify-between mb-[14px] ">
