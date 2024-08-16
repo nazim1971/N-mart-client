@@ -6,8 +6,6 @@ import LoadingSpinner from "../Hooks/LoadingSpiner";
 import toast from "react-hot-toast";
 import { FaStar } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
-import { FiBook } from "react-icons/fi";
-import { GoPeople } from "react-icons/go";
 
 
 

@@ -2,7 +2,7 @@
 
 const Contect = () => {
     return (
-        <div>
+        <div className="h-screen">
             This is contect
         </div>
     );

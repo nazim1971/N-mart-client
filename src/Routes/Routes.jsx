@@ -5,6 +5,7 @@ import Contect from "../components/Navber/Contect";
 import About from "../components/Navber/About";
 import Login from "../components/SignIn/Login";
 import Register from "../components/SignIn/Register";
+import Private from "../components/PrivateRoute/Private";
 
 const routes = createBrowserRouter([
     {
@@ -17,11 +18,11 @@ const routes = createBrowserRouter([
         },
        {
         path: '/contect',
-        element: <Contect/>
+        element: <Private><Contect/></Private>
        },
        {
         path: '/about',
-        element: <About/>
+        element: <Private><About/></Private>
        },
        {
         path: '/login',
