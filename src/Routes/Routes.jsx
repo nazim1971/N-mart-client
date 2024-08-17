@@ -6,14 +6,20 @@ import About from "../components/Navber/About";
 import Login from "../components/SignIn/Login";
 import Register from "../components/SignIn/Register";
 import Private from "../components/PrivateRoute/Private";
+import Error from "./Error";
 
 const routes = createBrowserRouter([
     {
       path: "/",
       element: <Root/>,
+      errorElement: <Error/>,
       children: [
         {
           path: '/',
+          element: <Login/>
+         },
+        {
+          path: '/home',
           element: <Home/>
         },
        {
@@ -23,10 +29,6 @@ const routes = createBrowserRouter([
        {
         path: '/about',
         element: <Private><About/></Private>
-       },
-       {
-        path: '/login',
-        element: <Login/>
        },
        {
         path: '/register',

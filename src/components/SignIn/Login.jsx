@@ -30,7 +30,7 @@ const onSubmit = (data) => {
     .then(() => {
       toast.success("Login Successfully");
      
-      navigate(location?.state ? location.state : "/");
+      navigate(location?.state ? location.state : "/home");
     })
     .catch((err) => {
       if (err.code === "auth/invalid-credential") {
@@ -44,7 +44,7 @@ const handleGoogleLogin = () => {
   googleLogin()
     .then(() => {
       toast.success("Login Successfully");
-      navigate(location?.state ? location.state : "/");
+      navigate(location?.state ? location.state : "/home");
     })
     .catch();
 };
@@ -57,7 +57,7 @@ const handleGoogleLogin = () => {
       
           <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
               <div className="flex justify-center mx-auto">
-                  <img className="w-auto h-10 sm:h-12" src="https://i.ibb.co/GJg1fYZ/Brain-boost-removebg-preview.png" alt="" />
+                  <img className="w-auto h-10 sm:h-12" src="https://i.ibb.co/C2Rx4rg/website-logo-removebg-preview.png" alt="" />
               </div>
       
               <p className="mt-3 text-xl text-center ">

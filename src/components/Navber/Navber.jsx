@@ -1,7 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Tooltip } from "react-tooltip";
-import 'react-tooltip/dist/react-tooltip.css'
 import "animate.css";
 import { AuthContext } from "../Provider/AuthProvider";
 
