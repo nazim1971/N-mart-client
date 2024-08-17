@@ -142,7 +142,7 @@ const Navber = () => {
              </div>
            </div>
           ) : (
-            <Link to="/login" className="btn bg-green-500 text-white">
+            <Link to="/" className="btn bg-green-500 text-white">
             Login
           </Link>
           )}
